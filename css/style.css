@@ -1,0 +1,186 @@
+/* Font */
+@font-face {
+    font-family: 'black_ops_oneregular';
+    src: url('../font/blackopsone-regular-webfont.woff2') format('woff2'),
+         url('../font/blackopsone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blackcasperregular';
+    src: url('../font/blackcasper-webfont.woff2') format('woff2'),
+         url('../font/blackcasper-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'nobileregular';
+    src: url('../font/nobile-regular-webfont.woff2') format('woff2'),
+         url('../font/nobile-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../font/opensans-regular-webfont.woff2') format('woff2'),
+         url('../font/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Style Utama */
+body {
+  font: 16px/20px 'open_sansregular', arial, serif;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  background-color: #333;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 93%;
+}
+
+ h1 {
+  font: 30px/50px 'blackcasperregular', serif;
+  text-align: center;
+}
+
+.header .garistiga {
+  font-family: arial;
+  position: fixed;
+  top: 2.8%;
+  left: 7%;
+  transform: rotate(90deg);
+  color: #fff;
+  font-size: 50px;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+.header .silang {
+  font-family: arial;
+  position: fixed;
+  top: 1.5%;
+  left: 8.5%;
+  color: #fff;
+  font-size: 70px;
+  text-decoration: none;
+  line-height: 20px;
+  margin-left: -9999px;
+}
+
+.overlay:target .garistiga {
+  margin-left: -9999px;
+}
+
+.overlay:target .silang {
+  margin-left: 0;
+  animation: navbarbuka 300ms;
+}
+
+body:target .garistiga {
+  animation: navbartutup 300ms;
+}
+
+.overlay {
+  padding-top: 100px;
+  position: fixed;
+  z-index: 9998;
+  text-align: center;
+  top: 7%;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  overflow: hidden;
+  background-color: rgba(30,30,30,1);
+}
+
+.overlay:target {
+  right: 30%;
+  transition: 300ms;
+}
+
+.overlay a {
+  font: 20px/40px nobileregular;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  width: 100%;
+  padding: 4%;
+  padding-top: 16%;
+  box-sizing: border-box;
+}
+
+.main img {
+  width: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  z-index: -9999;
+}
+
+.footer {
+  background-color: #333;
+  text-align: center;
+  line-height: 33px;
+  height: 40px;
+}
+
+/* Animation */
+
+@keyframes navbarbuka {
+  0% {
+    font-size: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    font-size: 70px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes navbartutup {
+  0% {
+    font-size: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    font-size: 50px;
+    transform: rotate(-270deg);
+  }
+}
